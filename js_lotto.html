@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Hoosier Lotto Numbers</title>
+</head>
+<body>
+
+    <h1>Fake Hoosier Lotto Number Generator</h1>
+    <h2 class="forLottoNumbers"></h2>
+    <h2 class="whileLottoNumbers"></h2>
+    
+</body>
+<script>
+    
+    // this is what the MZD documentation said
+    //     rand = Math.floor(Math.random() * (50-1) + 1); 
+    // console.log(rand);
+
+
+    // FOR LOOP
+    let forLottoHeader = document.querySelector(".forLottoNumbers");
+    let forRand;
+    let forLottoString = "";
+    for (let i = 0; i < 6; i++) {
+        forRand = Math.floor(Math.random() * (50-1) + 1);
+        forLottoString += `${forRand} `;
+
+    }
+
+    console.log(forLottoString);
+    forLottoHeader.innerHTML = forLottoString;
+
+    // WHILE LOOP
+    let whileLottoHeader = document.querySelector(".whileLottoNumbers");
+    let whileRand;
+    let whileLottoString = "";
+    let whileSentry = 0;
+    while (whileSentry < 6) {
+        whileRand = Math.floor(Math.random() * (50-1) + 1);
+        whileLottoString += `${whileRand} `;
+        whileSentry++;
+    }
+
+    console.log(whileLottoString);
+    whileLottoHeader.innerHTML = whileLottoString;
+
+    
+    
+
+
+</script>
+
+</html>
+
